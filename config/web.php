@@ -11,6 +11,9 @@ $config = [
     'layoutPath' => '@app/modules/simplebolg/views/layouts',
     'bootstrap' => ['log'],
     'defaultRoute' => '/simpleblog/site/index',
+    'modules' => [
+
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -53,24 +56,18 @@ $config = [
             ],
         ],
 
-        'authManager' => [
-            'class' => 'yii\rbac\PhpManager',
-            'defaultRoles' => [
-                'user',
-                'admin',
-                'superadmin'
-            ],
-            'itemFile' => '@vova07/rbac/data/items.php',
-            'assignmentFile' => '@vova07/rbac/data/assignments.php',
-            'ruleFile' => '@vova07/rbac/data/rules.php',
-        ],
         'i18n' => [
             'translations' => [
                 'yii2mod.user' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@yii2mod/user/messages',
                 ],
+                'yii2mod.rbac' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@yii2mod/rbac/messages',
+                ],
             ],
+
         ],
     ],
     'params' => $params,

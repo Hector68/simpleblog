@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\ArrayHelper;
+
 $params = require(__DIR__ . '/params.php');
 $db = require(__DIR__ . '/db.php');
 
@@ -40,7 +42,8 @@ if (YII_ENV_DEV) {
     ];
 }
 
-return array_merge(
-    include __DIR__ . '/common.php',
+$common = include __DIR__ . '/common.php';
+return ArrayHelper::merge(
+    $common,
     $config
 );

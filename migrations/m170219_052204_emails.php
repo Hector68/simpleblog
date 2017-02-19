@@ -7,13 +7,14 @@ class m170219_052204_emails extends Migration
     public function up()
     {
 
+
     }
 
     public function down()
     {
         echo "m170219_052204_emails cannot be reverted.\n";
 
-        return false;
+
     }
 
     /*
